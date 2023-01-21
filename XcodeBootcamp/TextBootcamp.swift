@@ -9,7 +9,19 @@ import SwiftUI
 
 struct TextBootcamp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text("Hello eveyone. I write this code to test the multiline.Hello eveyone. I write this code to test the multiline.Hello eveyone. I write this code to test the multiline.Hello eveyone. I write this code to test the multiline ")
+//            .font(.largeTitle)
+//            //.fontWeight(.bold)
+//            .bold()
+//            .underline(true,color: .red)
+////                .italic()
+//            .strikethrough(true, color:.yellow)
+//            .font(.system(size: 24, weight: .semibold, design: .monospaced))
+            //.baselineOffset(20) //Vertical space
+//            .kerning(20 )
+//            .multilineTextAlignment(.center)
+//            .foregroundColor(Color.indigo)
+//        
     }
 }
 
