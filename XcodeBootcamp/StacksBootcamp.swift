@@ -12,39 +12,25 @@ struct StacksBootcamp: View {
         // ZStack -> Back to front
         // VStack -> vertical
         // HStack -> Horizontal
-//        VStack(alignment: .listRowSeparatorLeading, spacing: 10, content: {
-//            Rectangle()
-//                .fill(.yellow)
-//                .frame(width: 100,height: 100)
-//            Rectangle()
-//                .fill(.red)
-//                .frame(width: 150,height: 150)
-//            Rectangle()
-//                .fill(.green)
-//                .frame(width: 200,height: 200)
-//        })
-//        HStack(alignment: .bottom, spacing: 10, content: {
-//            Rectangle()
-//                .fill(.yellow)
-//                .frame(width: 100,height: 100)
-//            Rectangle()
-//                .fill(.red)
-//                .frame(width: 150,height: 150)
-//            Rectangle()
-//                .fill(.green)
-//                .frame(width: 200,height: 200)
-//        })
-        ZStack(alignment: .trailing, content: {
-            Rectangle()
-                .fill(.yellow)
-                .frame(width: 200,height: 200)
-            Rectangle()
-                .fill(.red)
-                .frame(width: 150,height: 150)
-            Rectangle()
-                .fill(.green)
-                .frame(width: 100,height: 100)
-        })
+        VStack(spacing:50){
+            ZStack{
+                Circle()
+                    .frame(width: 100,height: 100)
+                Text("8")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+            }
+            
+            Text("9")
+                .font(.largeTitle)
+                .foregroundColor(.white)
+                .background(
+                    Circle()
+                        .frame(width: 100,height: 100)
+                )
+        }
+        
+        
         
     }
 }
