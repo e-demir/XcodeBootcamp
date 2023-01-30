@@ -9,23 +9,30 @@ import SwiftUI
 
 struct GridsBootcamp: View {
     
-    let data : [GridItem] = [
+    let columns : [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible()),
         GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible()),        
     ]
     
     
     var body: some View {
-       
-        LazyVGrid(columns: data) {
-            ForEach(0..<50) { index in
-                Rectangle()
-                    .frame(height: 50)
+        
+        ScrollView{
+            
+            Rectangle()
+                .fill(.blue)
+                .frame(height: 300)
+            
+            LazyVGrid(columns: columns) {
+                ForEach(0..<50) { index in
+                    Rectangle()
+                        .frame(height: 150)
+                }
             }
         }
+       
+        
     }
 }
 
