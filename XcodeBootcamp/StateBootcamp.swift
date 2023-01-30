@@ -10,6 +10,9 @@ import SwiftUI
 struct StateBootcamp: View {
     
     @State var bgColor : Color = Color.green
+    @State var fgColor : Color = Color.white
+    @State var title : String = "My Title"
+    @State var count : Int = 1
     
     
     var body: some View {
@@ -20,22 +23,28 @@ struct StateBootcamp: View {
             
             // content
             VStack(spacing: 10) {
-                Text("Title")
+                Text(title)
                     .font(.title)
-                Text("Count 1")
+                Text("Count \(count)")
                     .font(.title2)
                     .underline()
                 
                 HStack(spacing: 10) {
                     Button("BUTTON 1") {
                         bgColor = Color.blue
+                        title = "BUTTON 1 was pressed"
+                        count += 1
+                        fgColor = Color.white
                     }
                     Button("BUTTON 2") {
                         bgColor = Color.yellow
+                        title = "BUTTON 2 was pressed"
+                        count -= 1
+                        fgColor = Color.blue
                     }
                 }
             }
-        }.foregroundColor(.white)
+        }.foregroundColor(fgColor)
     }
 }
 
