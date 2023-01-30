@@ -8,17 +8,13 @@
 import SwiftUI
 
 struct ForeachBootcamp: View {
+    
+    let data: [String] = ["Emrulah","Ayça","Selami","Gönül"]
+    
     var body: some View {
         VStack{
-            ForEach(1..<11){ index in
-                ZStack {
-                    Circle()
-                        .fill(.red)
-                        .frame(width: 50, height: 50)
-                    Text("\(index)")
-                        .foregroundColor(.white)
-                        
-                }
+            ForEach(data.indices) { index in
+                Text("\(data[index]) : \(index)")
             }
         }
     }
