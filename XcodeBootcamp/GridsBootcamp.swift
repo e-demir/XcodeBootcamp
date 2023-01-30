@@ -10,11 +10,11 @@ import SwiftUI
 struct GridsBootcamp: View {
     
     let data : [GridItem] = [
-        GridItem(.fixed(50)),
-        GridItem(.fixed(75)),
-        GridItem(.fixed(100)),
-        GridItem(.fixed(75)),
-        GridItem(.fixed(50)),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),
+        GridItem(.flexible()),        
     ]
     
     
