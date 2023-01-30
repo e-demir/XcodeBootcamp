@@ -10,9 +10,10 @@ import SwiftUI
 struct GridsBootcamp: View {
     
     let columns : [GridItem] = [
-        GridItem(.flexible()),
-        GridItem(.flexible()),
-        GridItem(.flexible()),
+        GridItem(.flexible(),spacing: 6),
+        GridItem(.flexible(),spacing: 6),
+        GridItem(.flexible(),spacing: 6),
+        GridItem(.flexible(),spacing: 6),
     ]
     
     
@@ -21,14 +22,50 @@ struct GridsBootcamp: View {
         ScrollView{
             
             Rectangle()
-                .fill(.blue)
-                .frame(height: 300)
+                .fill(.yellow)
+                .frame(height: 400)
             
-            LazyVGrid(columns: columns) {
-                ForEach(0..<50) { index in
-                    Rectangle()
-                        .frame(height: 150)
-                }
+            LazyVGrid(
+                columns: columns,
+                alignment: .center,
+                spacing: 6,
+                pinnedViews:[.sectionHeaders]) {
+                    Section {
+                        ForEach(0..<15) { index in
+                            Rectangle()
+                                .fill(.blue)
+                                .frame(height: 150)
+                                
+                        }
+                    } header: {
+                        Text("Section 1")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .background(Color.blue)
+                            .font(.title)
+                            .padding()
+                            
+                    }
+                    Section {
+                        ForEach(0..<15) { index in
+                            Rectangle()
+                                .fill(.red)
+                                .frame(height: 150)
+                                
+                        }
+                    } header: {
+                        Text("Section 2")
+                            .foregroundColor(.white)
+                            .frame(maxWidth: .infinity,alignment: .leading)
+                            .background(Color.red)
+                            .font(.title)
+                            .padding()
+                            
+                    }
+                    
+
+                    
+                    
             }
         }
        
