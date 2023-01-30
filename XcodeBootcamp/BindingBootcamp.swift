@@ -10,6 +10,7 @@ import SwiftUI
 struct BindingBootcamp: View {
     
     @State var bgColor : Color = Color.red
+    @State var title : String = "Boring title 😕"
     
     var body: some View {
         ZStack{
@@ -18,24 +19,34 @@ struct BindingBootcamp: View {
                 .edgesIgnoringSafeArea(.all)
             
             // content
-            ButtonView(backgroundColor: $bgColor)
+            VStack(spacing: 30) {
+                Text(title)
+                    .font(.largeTitle)
+                    .underline()
+                
+                ButtonView(backgroundColor: $bgColor, newTitle: $title)
+            }
         }
     }
 }
 struct ButtonView: View {
     
-    @Binding var backgroundColor : Color
+    @Binding var backgroundColor : Color  //changes the other view
+    @Binding var newTitle : String  //changes the other view
+    @State var buttonColor : Color = Color.black // changes this view
     
     
     var body: some View {
         Button {
             backgroundColor = Color.mint
+            buttonColor = Color.red
+            newTitle = "Happy new title 🥳"
         } label: {
             Text("Button")
                 .foregroundColor(.white)
                 .padding(20)
                 .padding(.horizontal,20)
-                .background(Color.black)
+                .background(buttonColor)
                 .cornerRadius(20)
             
         }
