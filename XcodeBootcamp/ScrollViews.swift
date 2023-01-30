@@ -10,37 +10,24 @@ import SwiftUI
 struct ScrollViews: View {
     var body: some View {
         
-        VStack{
-            ScrollView(.horizontal, showsIndicators: false, content:{
-                HStack{
-                    ForEach(0..<100){ item in
-                        ZStack{
-                            Rectangle()
-                                .fill(.yellow)
-                                .frame(width: 300, height: 300)
-                            Text("\(item)")
+        ScrollView{
+            VStack{
+                ForEach(0..<20) { index in
+                    ScrollView(.horizontal, showsIndicators: true) {
+                        HStack {
+                            ForEach(0..<10) { index in
+                                RoundedRectangle(cornerRadius: 20 )
+                                    .fill(.cyan)
+                                    .frame(width: 200, height: 150)
+                                    .shadow(radius: 10)
+                                    .padding(10)
+                            }
                         }
                     }
-                }
-            })
-            
-            ScrollView {
-                VStack{
-                    ForEach(0..<100){ item in
-                        ZStack{
-                            Rectangle()
-                                .fill(.yellow)
-                                .frame(height: 300)
-                            Text("\(item)")
-                        }
-                    }
+                    
                 }
             }
         }
-        
-        
-        
-        
         
         
     }
