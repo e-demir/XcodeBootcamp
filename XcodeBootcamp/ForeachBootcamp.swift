@@ -10,8 +10,15 @@ import SwiftUI
 struct ForeachBootcamp: View {
     var body: some View {
         VStack{
-            ForEach(0..<10){ index in
-                Text("Selam, \(index)")
+            ForEach(1..<11){ index in
+                ZStack {
+                    Circle()
+                        .fill(.red)
+                        .frame(width: 50, height: 50)
+                    Text("\(index)")
+                        .foregroundColor(.white)
+                        
+                }
             }
         }
     }
