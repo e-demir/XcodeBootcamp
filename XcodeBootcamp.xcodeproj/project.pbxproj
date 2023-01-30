@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		844D12F82988377100D2A67E /* InitializerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D12F72988377100D2A67E /* InitializerBootcamp.swift */; };
 		84707BEA297D958F0035F4F7 /* IconsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84707BE9297D958F0035F4F7 /* IconsBootcamp.swift */; };
 		84707BEC297DBC550035F4F7 /* ImageBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84707BEB297DBC550035F4F7 /* ImageBootcamp.swift */; };
 		84707BEE297DC00C0035F4F7 /* FrameBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84707BED297DC00C0035F4F7 /* FrameBootcamp.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		844D12F72988377100D2A67E /* InitializerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerBootcamp.swift; sourceTree = "<group>"; };
 		84707BE9297D958F0035F4F7 /* IconsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconsBootcamp.swift; sourceTree = "<group>"; };
 		84707BEB297DBC550035F4F7 /* ImageBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageBootcamp.swift; sourceTree = "<group>"; };
 		84707BED297DC00C0035F4F7 /* FrameBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FrameBootcamp.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				84707BF329806B000035F4F7 /* StacksBootcamp.swift */,
 				84707BF72980727D0035F4F7 /* SpacerBootcamp.swift */,
 				84707BEF297DC46F0035F4F7 /* BackgroundBootcamp.swift */,
+				844D12F72988377100D2A67E /* InitializerBootcamp.swift */,
 				84707BE9297D958F0035F4F7 /* IconsBootcamp.swift */,
 				84C19333297C8B1900D62793 /* TextBootcamp.swift */,
 				84707BF1297DC5D80035F4F7 /* OverlayBootcamp.swift */,
@@ -175,6 +178,7 @@
 				84707BF629806FC60035F4F7 /* PaddingAndSpacerBootcamp.swift in Sources */,
 				84C19328297C882300D62793 /* ContentView.swift in Sources */,
 				84707BEC297DBC550035F4F7 /* ImageBootcamp.swift in Sources */,
+				844D12F82988377100D2A67E /* InitializerBootcamp.swift in Sources */,
 				84707BF0297DC46F0035F4F7 /* BackgroundBootcamp.swift in Sources */,
 				84707BF2297DC5D80035F4F7 /* OverlayBootcamp.swift in Sources */,
 				84707BEA297D958F0035F4F7 /* IconsBootcamp.swift in Sources */,
