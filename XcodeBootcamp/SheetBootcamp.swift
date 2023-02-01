@@ -34,20 +34,23 @@ struct SheetBootcamp: View {
 }
 
 struct SecondScreen : View{
+    
+    @Environment(\.presentationMode) var presentationMode
+    
     var body: some View{
-        ZStack{
+        ZStack(alignment: .topLeading){
             
           // background
             Color.red.edgesIgnoringSafeArea(.all)
             
           // foreground
             Button {
-                
+                presentationMode.wrappedValue.dismiss()
             } label: {
-                Text("Clicken sie").foregroundColor(.red)
-                    .frame(width: 100, height: 50)
-                    .background(Color.white).cornerRadius(30)
-                    .padding(30)
+                Image(systemName: "xmark")
+                    .foregroundColor(.white)
+                    .font(.largeTitle)
+                    .padding(20)
             }
         }
     }
@@ -56,5 +59,6 @@ struct SecondScreen : View{
 struct SheetBootcamp_Previews: PreviewProvider {
     static var previews: some View {
         SheetBootcamp()
+        //SecondScreen()
     }
 }
