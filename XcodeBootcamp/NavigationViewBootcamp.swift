@@ -23,7 +23,17 @@ struct NavigationViewBootcamp: View {
             .navigationTitle("Inbox")
             .navigationBarTitleDisplayMode(.automatic)
             .navigationBarHidden(false)
-            .navigationBarItems(leading: Image(systemName: "person.fill"), trailing: Image(systemName: "gear"))
+            .navigationBarItems(
+                leading: NavigationLink(destination: {
+                    SsecondScreen()
+                }, label: {
+                    Image(systemName: "person.fill")
+                }).accentColor(.yellow)
+                    
+                ,trailing: HStack {
+                    Image(systemName: "gear")
+                    Image(systemName: "flame").renderingMode(.original)
+                })
             
             
         }
@@ -38,7 +48,7 @@ struct SsecondScreen : View {
         ZStack {
             Color.green.edgesIgnoringSafeArea(.all)
                 .navigationTitle("2nd screen")
-                .navigationBarHidden(true)
+                .navigationBarHidden(false)
             
             VStack {
                 Button("Go back") {
