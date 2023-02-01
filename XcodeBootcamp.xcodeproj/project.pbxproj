@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		843AD68F298AD29B009ECD03 /* IfElseBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AD68E298AD29B009ECD03 /* IfElseBootcamp.swift */; };
+		843AD691298AD451009ECD03 /* AnimationBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843AD690298AD451009ECD03 /* AnimationBootcamp.swift */; };
 		844D12F82988377100D2A67E /* InitializerBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D12F72988377100D2A67E /* InitializerBootcamp.swift */; };
 		844D12FA29883B8800D2A67E /* ForeachBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D12F929883B8800D2A67E /* ForeachBootcamp.swift */; };
 		844D12FC2988425000D2A67E /* ScrollViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D12FB2988425000D2A67E /* ScrollViews.swift */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		843AD68E298AD29B009ECD03 /* IfElseBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfElseBootcamp.swift; sourceTree = "<group>"; };
+		843AD690298AD451009ECD03 /* AnimationBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationBootcamp.swift; sourceTree = "<group>"; };
 		844D12F72988377100D2A67E /* InitializerBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializerBootcamp.swift; sourceTree = "<group>"; };
 		844D12F929883B8800D2A67E /* ForeachBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForeachBootcamp.swift; sourceTree = "<group>"; };
 		844D12FB2988425000D2A67E /* ScrollViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViews.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				843AD68E298AD29B009ECD03 /* IfElseBootcamp.swift */,
 				844D12F929883B8800D2A67E /* ForeachBootcamp.swift */,
 				844D1303298857F500D2A67E /* StateBootcamp.swift */,
+				843AD690298AD451009ECD03 /* AnimationBootcamp.swift */,
 				84707BF329806B000035F4F7 /* StacksBootcamp.swift */,
 				844D13052988613100D2A67E /* BindingBootcamp.swift */,
 				844D12FF29884FE100D2A67E /* SafeAreaBootcamp.swift */,
@@ -209,6 +212,7 @@
 				844D12F82988377100D2A67E /* InitializerBootcamp.swift in Sources */,
 				844D130029884FE100D2A67E /* SafeAreaBootcamp.swift in Sources */,
 				84707BF0297DC46F0035F4F7 /* BackgroundBootcamp.swift in Sources */,
+				843AD691298AD451009ECD03 /* AnimationBootcamp.swift in Sources */,
 				84707BF2297DC5D80035F4F7 /* OverlayBootcamp.swift in Sources */,
 				844D13022988537E00D2A67E /* ButtonBootcamp.swift in Sources */,
 				843AD68F298AD29B009ECD03 /* IfElseBootcamp.swift in Sources */,
