@@ -16,45 +16,40 @@ struct ListBootcamp: View {
     @State var veggies: [String] = [
     "Domato","Potato","Carrot"
     ]
-    
-    func delete(indexset: IndexSet){
-        fruits.remove(atOffsets: indexset)
-    }
-    
-    
-    
-    
+
     var body: some View {
-        NavigationView{
-            List {
+        
+        NavigationView {
+            List{
                 Section {
                     ForEach(fruits, id: \.self) { fruit in
                         Text(fruit)
                     }
-                    .onDelete { index  in
-                        delete(indexset: index)
+                    .onDelete { IndexSet in
+                        fruits.remove(atOffsets: IndexSet)
                     }
                     .onMove { IndexSet, Int in
                         fruits.move(fromOffsets: IndexSet, toOffset: Int)
                     }
                 } header: {
-                    Text("Fruits")
-                }                
+                    HStack {
+                        Text("Meyveler")
+                        Image(systemName: "flame")
+                    }.font(.largeTitle)
+                        .fontWeight(.heavy)
+                }
                 Section {
                     ForEach(veggies, id: \.self) { veggie in
                         Text(veggie)
                     }
                 } header: {
-                    Text("Veggies")
+                    Text("Sebzeler")
                 }
             }
-            .listStyle(GroupedListStyle())
-            .navigationTitle("Alışveriş List")
-            .navigationBarItems(leading: EditButton())
-            .navigationBarItems(trailing: Button(action: {
-                fruits.append("Coconot")
-            }, label: {
-                Text("Add")
+            .listStyle(InsetListStyle())
+            .navigationTitle("Listem")
+            .navigationBarItems(leading: EditButton(), trailing: Button("Add", action: {
+                veggies.append("Cucumber")
             }))
         }
     }
