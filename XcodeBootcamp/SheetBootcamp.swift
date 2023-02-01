@@ -27,6 +27,7 @@ struct SheetBootcamp: View {
                     .padding(30)
             }
 //            .sheet(isPresented: $isSheetPresented) {
+                // NO CONDITIONAL LOGIC
 //                SecondScreen()
 //            }
         }
