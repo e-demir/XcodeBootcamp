@@ -14,15 +14,18 @@ struct AnimationBootcamp: View {
     var body: some View {
         VStack{
             Button("Click me"){
-                withAnimation(.easeIn){
-                    isClicked.toggle()
-                }
+               
+                isClicked.toggle()
             }
             
             RoundedRectangle(cornerRadius: isClicked ? 200 :  20)
                 .fill(isClicked ? .red : .mint)
                 .frame(width: isClicked ? 20 : 200, height: 200)
                 .offset(y: isClicked ? 300 : 0)
+                .animation(Animation
+                    .easeIn
+                    .repeatForever()
+                )
         }
     }
 }
