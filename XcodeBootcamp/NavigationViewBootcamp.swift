@@ -23,6 +23,7 @@ struct NavigationViewBootcamp: View {
             .navigationTitle("Inbox")
             .navigationBarTitleDisplayMode(.automatic)
             .navigationBarHidden(false)
+            .navigationBarItems(leading: Image(systemName: "person.fill"), trailing: Image(systemName: "gear"))
             
             
         }
