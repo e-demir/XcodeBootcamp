@@ -27,7 +27,27 @@ struct SheetBootcamp: View {
                     .padding(30)
             }
             .sheet(isPresented: $isSheetPresented) {
-                Text("Wilcommen sie")
+                SecondScreen()
+            }
+        }
+    }
+}
+
+struct SecondScreen : View{
+    var body: some View{
+        ZStack{
+            
+          // background
+            Color.red.edgesIgnoringSafeArea(.all)
+            
+          // foreground
+            Button {
+                
+            } label: {
+                Text("Clicken sie").foregroundColor(.red)
+                    .frame(width: 100, height: 50)
+                    .background(Color.white).cornerRadius(30)
+                    .padding(30)
             }
         }
     }
