@@ -16,10 +16,35 @@ struct NavigationViewBootcamp: View {
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
                 Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                NavigationLink("2nd Screen") {
+                    SsecondScreen()
+                }
             }
             .navigationTitle("Inbox")
             .navigationBarTitleDisplayMode(.automatic)
-            .navigationBarHidden(true)
+            .navigationBarHidden(false)
+            
+            
+        }
+    }
+}
+
+struct SsecondScreen : View {
+    var body: some View{
+        ZStack {
+            Color.green.edgesIgnoringSafeArea(.all)
+                .navigationTitle("2nd screen")
+            NavigationLink("3rd Screen") {
+                ThirdScreen()
+            }
+        }
+    }
+}
+struct ThirdScreen : View {
+    var body: some View{
+        ZStack {
+            Color.red.edgesIgnoringSafeArea(.all)
+                .navigationTitle("3rd Screen")
         }
     }
 }
