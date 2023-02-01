@@ -30,13 +30,25 @@ struct NavigationViewBootcamp: View {
 }
 
 struct SsecondScreen : View {
+    
+    @Environment(\.presentationMode) var mode
+    
     var body: some View{
         ZStack {
             Color.green.edgesIgnoringSafeArea(.all)
                 .navigationTitle("2nd screen")
-            NavigationLink("3rd Screen") {
-                ThirdScreen()
+                .navigationBarHidden(true)
+            
+            VStack {
+                Button("Go back") {
+                    mode.wrappedValue.dismiss()
+                }
+                NavigationLink("3rd Screen") {
+                    ThirdScreen()
+                }
             }
+            
+            
         }
     }
 }
