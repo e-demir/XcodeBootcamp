@@ -29,9 +29,17 @@ struct PopoverBootcamp: View {
             }
 
         }
-        .sheet(isPresented: $isSheetShown) {
-            SheetScreen()
-        }
+        
+        // METHOD-1 : SHEET
+        // .sheet(isPresented: $isSheetShown) {
+        // SheetScreen()
+        // }
+        
+        // METHOD-2 : TRANSITION
+        
+        
+        
+        
     }
 }
 
