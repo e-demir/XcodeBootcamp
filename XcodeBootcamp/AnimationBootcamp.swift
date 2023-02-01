@@ -22,10 +22,10 @@ struct AnimationBootcamp: View {
                 .fill(isClicked ? .red : .mint)
                 .frame(width: isClicked ? 20 : 200, height: 200)
                 .offset(y: isClicked ? 300 : 0)
-                .animation(Animation
-                    .easeIn
-                    .repeatForever()
-                )
+                .animation(.spring(
+                    response: 0.4,
+                    dampingFraction: 9,
+                    blendDuration: 1))
         }
     }
 }
