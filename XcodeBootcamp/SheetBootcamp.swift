@@ -26,9 +26,13 @@ struct SheetBootcamp: View {
                     .background(Color.white).cornerRadius(30)
                     .padding(30)
             }
-            .sheet(isPresented: $isSheetPresented) {
-                SecondScreen()
-            }
+//            .sheet(isPresented: $isSheetPresented) {
+//                SecondScreen()
+//            }
+        }
+        // same with the sheet, not draggable, covers the whole screen
+        .fullScreenCover(isPresented: $isSheetPresented) {
+            SecondScreen()
         }
     }
 }
