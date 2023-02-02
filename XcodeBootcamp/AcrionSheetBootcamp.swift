@@ -14,12 +14,14 @@ struct AcrionSheetBootcamp: View {
     var body: some View {
         Button("Hello"){
             actionSheetShown.toggle()
+        }                
+        .actionSheet(isPresented: $actionSheetShown) {
+            getActionSheet()
         }
-        .confirmationDialog(
-            LocalizedStringKey.init("Hel"),
-            isPresented: $actionSheetShown,
-            titleVisibility: .visible) {            
-        }
+    }
+    
+    func getActionSheet() -> ActionSheet {
+        return ActionSheet(title: Text("Title"), message: Text("Message"), buttons: [ActionSheet.Button.destructive(Text("Back"), action: {}), .default(Text("Yaay"))])
     }
 }
 
