@@ -46,6 +46,7 @@
 		84C11AC52990377500F8DC75 /* OnApperaBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11AC42990377500F8DC75 /* OnApperaBootcamp.swift */; };
 		84C11AC729903AFE00F8DC75 /* IfLetGuardBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11AC629903AFE00F8DC75 /* IfLetGuardBootcamp.swift */; };
 		84C11AC929903E2500F8DC75 /* TapGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11AC829903E2500F8DC75 /* TapGesture.swift */; };
+		84C11ACC2990435800F8DC75 /* CustomDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11ACB2990435800F8DC75 /* CustomDataModel.swift */; };
 		84C19326297C882300D62793 /* XcodeBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C19325297C882300D62793 /* XcodeBootcampApp.swift */; };
 		84C19328297C882300D62793 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C19327297C882300D62793 /* ContentView.swift */; };
 		84C1932A297C882400D62793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C19329297C882400D62793 /* Assets.xcassets */; };
@@ -95,6 +96,7 @@
 		84C11AC42990377500F8DC75 /* OnApperaBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnApperaBootcamp.swift; sourceTree = "<group>"; };
 		84C11AC629903AFE00F8DC75 /* IfLetGuardBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IfLetGuardBootcamp.swift; sourceTree = "<group>"; };
 		84C11AC829903E2500F8DC75 /* TapGesture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGesture.swift; sourceTree = "<group>"; };
+		84C11ACB2990435800F8DC75 /* CustomDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataModel.swift; sourceTree = "<group>"; };
 		84C19322297C882300D62793 /* XcodeBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C19325297C882300D62793 /* XcodeBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeBootcampApp.swift; sourceTree = "<group>"; };
 		84C19327297C882300D62793 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 				84C11AB7298FF56400F8DC75 /* DatePicker.swift */,
 				84707BF529806FC60035F4F7 /* PaddingAndSpacerBootcamp.swift */,
 				843AD696298ADFE6009ECD03 /* PopoverBootcamp.swift */,
+				84C11ACB2990435800F8DC75 /* CustomDataModel.swift */,
 				84C11AC2299032B800F8DC75 /* DarkModeBootcamp.swift */,
 				84C11ABB29902A6700F8DC75 /* SliderBootcamp.swift */,
 				843AD6A2298C4966009ECD03 /* TextFieldBootcamp.swift */,
@@ -295,6 +298,7 @@
 				84707BF2297DC5D80035F4F7 /* OverlayBootcamp.swift in Sources */,
 				844D13022988537E00D2A67E /* ButtonBootcamp.swift in Sources */,
 				843AD68F298AD29B009ECD03 /* IfElseBootcamp.swift in Sources */,
+				84C11ACC2990435800F8DC75 /* CustomDataModel.swift in Sources */,
 				84C11AB6298FF38F00F8DC75 /* ColorPickerBootcamp.swift in Sources */,
 				844D12FC2988425000D2A67E /* ScrollViews.swift in Sources */,
 				84707BEA297D958F0035F4F7 /* IconsBootcamp.swift in Sources */,
