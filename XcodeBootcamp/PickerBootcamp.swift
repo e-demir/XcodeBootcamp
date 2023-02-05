@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PickerBootcamp: View {
     @State var selection : String = "Most liked"
-    @State var options : [String] = ["Most liked","Most popular","Recently added"]
+    @State var options : [String] = ["Most liked","Most popular","Recently added"] 
     
     var body: some View {
         
@@ -19,7 +19,7 @@ struct PickerBootcamp: View {
             ForEach(options.indices) { index in
                 Text(options[index]).tag(options[index])
             }
-        } label: {            
+        } label: {
         }.pickerStyle(.segmented)
 
         
