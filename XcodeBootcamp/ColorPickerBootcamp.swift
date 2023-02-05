@@ -14,7 +14,16 @@ struct ColorPickerBootcamp: View {
         ZStack{
             selectedColor.edgesIgnoringSafeArea(.all)
             
-            ColorPicker("Select a color", selection: $selectedColor, supportsOpacity: true)
+            ColorPicker(
+                "Select a color",
+                selection: $selectedColor,
+                supportsOpacity: true)
+            .padding(20)
+            .background(Color.black)
+            .foregroundColor(.white)
+            .cornerRadius(20)
+            .font(.headline)
+            .padding(50)
         }
     }
 }
