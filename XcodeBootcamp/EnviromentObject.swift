@@ -29,9 +29,33 @@ struct EnviromentObject: View {
         NavigationView {
             List{
                 ForEach(enviromentViewModel.dataArray, id: \.self) { item in
-                    Text(item)
+                    NavigationLink {
+                        DetailView(selectedItem: item)
+                    } label: {
+                        Text(item)
+                    }
+
                 }
-            }
+            }.navigationTitle("Apple devices")
+        }
+    }
+}
+
+struct DetailView: View{
+    let selectedItem: String
+    var body: some View{
+        ZStack{
+            //bg
+            Color.orange.edgesIgnoringSafeArea(.all)
+            
+            //fg
+            Text(selectedItem)
+                .font(.headline)
+                .foregroundColor(.orange)
+                .padding(15)
+                .padding(.horizontal,10)
+                .background(Color.white)
+                .cornerRadius(15)
         }
     }
 }
@@ -39,5 +63,6 @@ struct EnviromentObject: View {
 struct EnviromentObject_Previews: PreviewProvider {
     static var previews: some View {
         EnviromentObject()
+        //DetailView(selectedItem: "iMac")
     }
 }
