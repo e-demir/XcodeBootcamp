@@ -49,6 +49,7 @@
 		84C11ACC2990435800F8DC75 /* CustomDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11ACB2990435800F8DC75 /* CustomDataModel.swift */; };
 		84C11ACE2992D1DB00F8DC75 /* ViewModelBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11ACD2992D1DB00F8DC75 /* ViewModelBootcamp.swift */; };
 		84C11AD02992DEA800F8DC75 /* EnviromentObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11ACF2992DEA800F8DC75 /* EnviromentObject.swift */; };
+		84C11AD22992EDED00F8DC75 /* AppStorageBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C11AD12992EDED00F8DC75 /* AppStorageBootcamp.swift */; };
 		84C19326297C882300D62793 /* XcodeBootcampApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C19325297C882300D62793 /* XcodeBootcampApp.swift */; };
 		84C19328297C882300D62793 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C19327297C882300D62793 /* ContentView.swift */; };
 		84C1932A297C882400D62793 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84C19329297C882400D62793 /* Assets.xcassets */; };
@@ -101,6 +102,7 @@
 		84C11ACB2990435800F8DC75 /* CustomDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDataModel.swift; sourceTree = "<group>"; };
 		84C11ACD2992D1DB00F8DC75 /* ViewModelBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelBootcamp.swift; sourceTree = "<group>"; };
 		84C11ACF2992DEA800F8DC75 /* EnviromentObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnviromentObject.swift; sourceTree = "<group>"; };
+		84C11AD12992EDED00F8DC75 /* AppStorageBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStorageBootcamp.swift; sourceTree = "<group>"; };
 		84C19322297C882300D62793 /* XcodeBootcamp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = XcodeBootcamp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84C19325297C882300D62793 /* XcodeBootcampApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XcodeBootcampApp.swift; sourceTree = "<group>"; };
 		84C19327297C882300D62793 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				844D12FB2988425000D2A67E /* ScrollViews.swift */,
 				84C11AB9298FF7D600F8DC75 /* StepperBootcamp.swift */,
 				84C11AC029902F6B00F8DC75 /* TabViewBootcamp.swift */,
+				84C11AD12992EDED00F8DC75 /* AppStorageBootcamp.swift */,
 				84C11AB7298FF56400F8DC75 /* DatePicker.swift */,
 				84707BF529806FC60035F4F7 /* PaddingAndSpacerBootcamp.swift */,
 				843AD696298ADFE6009ECD03 /* PopoverBootcamp.swift */,
@@ -286,6 +289,7 @@
 				84C11AC929903E2500F8DC75 /* TapGesture.swift in Sources */,
 				84C11AD02992DEA800F8DC75 /* EnviromentObject.swift in Sources */,
 				844D12FA29883B8800D2A67E /* ForeachBootcamp.swift in Sources */,
+				84C11AD22992EDED00F8DC75 /* AppStorageBootcamp.swift in Sources */,
 				843AD69B298AF14D009ECD03 /* ListBootcamp.swift in Sources */,
 				84C11ABA298FF7D600F8DC75 /* StepperBootcamp.swift in Sources */,
 				84C11ACE2992D1DB00F8DC75 /* ViewModelBootcamp.swift in Sources */,
