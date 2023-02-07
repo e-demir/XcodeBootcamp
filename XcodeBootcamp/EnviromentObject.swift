@@ -30,7 +30,7 @@ struct EnviromentObject: View {
             List{
                 ForEach(enviromentViewModel.dataArray, id: \.self) { item in
                     NavigationLink {
-                        DetailView(selectedItem: item)
+                        DetailView(selectedItem: item, enviromentViewModel: enviromentViewModel)
                     } label: {
                         Text(item)
                     }
@@ -42,7 +42,10 @@ struct EnviromentObject: View {
 }
 
 struct DetailView: View{
+    
     let selectedItem: String
+    @ObservedObject var enviromentViewModel = EnviromentViewModel()
+    
     var body: some View{
         ZStack{
             //bg
@@ -50,7 +53,7 @@ struct DetailView: View{
             
             //fg
             
-            NavigationLink(destination: FinalView()) {
+            NavigationLink(destination: FinalView(enviromentViewModel: enviromentViewModel)) {
                 Text(selectedItem)
                     .font(.headline)
                     .foregroundColor(.orange)
@@ -64,6 +67,9 @@ struct DetailView: View{
 }
 
 struct FinalView: View{
+    
+    @ObservedObject var enviromentViewModel = EnviromentViewModel()
+    
     var body: some View{
         ZStack{
             //bg
@@ -72,6 +78,13 @@ struct FinalView: View{
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing)
             .edgesIgnoringSafeArea(.all)
+            
+            //fg
+            VStack {
+                ForEach(enviromentViewModel.dataArray, id: \.self) { item in
+                    Text(item)
+                }
+            }
         }
     }
 }
