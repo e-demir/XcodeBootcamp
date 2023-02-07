@@ -20,7 +20,7 @@ class EnviromentViewModel : ObservableObject{
     }
 }
 
-struct EnviromentObject: View {
+struct EnviromentObjectBootcamp: View {
     
     //CAUSE FIRST USAGE
     @StateObject var enviromentViewModel = EnviromentViewModel()
@@ -30,21 +30,20 @@ struct EnviromentObject: View {
             List{
                 ForEach(enviromentViewModel.dataArray, id: \.self) { item in
                     NavigationLink {
-                        DetailView(selectedItem: item, enviromentViewModel: enviromentViewModel)
+                        DetailView(selectedItem: item)
                     } label: {
                         Text(item)
                     }
 
                 }
             }.navigationTitle("Apple devices")
-        }
+        }.environmentObject(enviromentViewModel)
     }
 }
 
 struct DetailView: View{
     
     let selectedItem: String
-    @ObservedObject var enviromentViewModel = EnviromentViewModel()
     
     var body: some View{
         ZStack{
@@ -53,7 +52,7 @@ struct DetailView: View{
             
             //fg
             
-            NavigationLink(destination: FinalView(enviromentViewModel: enviromentViewModel)) {
+            NavigationLink(destination: FinalView()) {
                 Text(selectedItem)
                     .font(.headline)
                     .foregroundColor(.orange)
@@ -68,7 +67,7 @@ struct DetailView: View{
 
 struct FinalView: View{
     
-    @ObservedObject var enviromentViewModel = EnviromentViewModel()
+    @EnvironmentObject var viewModel : EnviromentViewModel
     
     var body: some View{
         ZStack{
@@ -81,7 +80,7 @@ struct FinalView: View{
             
             //fg
             VStack {
-                ForEach(enviromentViewModel.dataArray, id: \.self) { item in
+                ForEach(viewModel.dataArray, id: \.self) { item in
                     Text(item)
                 }
             }
@@ -91,7 +90,7 @@ struct FinalView: View{
 
 struct EnviromentObject_Previews: PreviewProvider {
     static var previews: some View {
-        EnviromentObject()
+        EnviromentObjectBootcamp()
         //DetailView(selectedItem: "iMac")
         //FinalView()
     }
