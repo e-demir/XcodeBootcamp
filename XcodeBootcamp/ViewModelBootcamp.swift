@@ -13,7 +13,7 @@ struct FruitModel : Identifiable{
     let count: Int
 }
 
-class FruitViewModel{
+class FruitViewModel : ObservableObject{
     
     @Published var fruitArray : [FruitModel] = []
     
@@ -34,7 +34,8 @@ class FruitViewModel{
 }
 
 struct ViewModelBootcamp: View {
-    var fruitViewModel: FruitViewModel = FruitViewModel()
+    
+    @ObservedObject var fruitViewModel: FruitViewModel = FruitViewModel()
     
     var body: some View {
         NavigationView {
@@ -49,11 +50,12 @@ struct ViewModelBootcamp: View {
                 .onDelete { indexSet in
                     fruitViewModel.performDelete(indexSet: indexSet)
                 }
+                
+            }.listStyle(.grouped)
+                .navigationTitle("Fruit List")
                 .onAppear {
                     fruitViewModel.fetchData()
                 }
-            }.listStyle(.grouped)
-                .navigationTitle("Fruit List")
                 
         }
     }
