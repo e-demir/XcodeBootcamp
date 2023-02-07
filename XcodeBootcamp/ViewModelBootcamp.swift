@@ -16,15 +16,22 @@ struct FruitModel : Identifiable{
 class FruitViewModel : ObservableObject{
     
     @Published var fruitArray : [FruitModel] = []
+    @Published var isLoading : Bool = false
     
     func fetchData() {
+        isLoading = true
         let fruit1 = FruitModel(name: "Banana", count: 4)
         let fruit2 = FruitModel(name: "Orange", count: 1)
         let fruit3 = FruitModel(name: "Peach", count: 5)
+        DispatchQueue.main.asyncAfter(deadline: .now()+4){
+            self.fruitArray.append(fruit1)
+            self.fruitArray.append(fruit2)
+            self.fruitArray.append(fruit3)
+            self.isLoading = false
+        }
         
-        fruitArray.append(fruit1)
-        fruitArray.append(fruit2)
-        fruitArray.append(fruit3)
+        
+        
     }
     
     func performDelete(indexSet : IndexSet){
@@ -40,17 +47,20 @@ struct ViewModelBootcamp: View {
     var body: some View {
         NavigationView {
             List{
-                ForEach(fruitViewModel.fruitArray) { fruit in
-                    HStack{
-                        Text("\(fruit.count)")
-                        Text(fruit.name)
-                            .font(.headline)
+                if fruitViewModel.isLoading{
+                    ProgressView()
+                }else{
+                    ForEach(fruitViewModel.fruitArray) { fruit in
+                        HStack{
+                            Text("\(fruit.count)")
+                            Text(fruit.name)
+                                .font(.headline)
+                        }
                     }
-                }
-                .onDelete { indexSet in
-                    fruitViewModel.performDelete(indexSet: indexSet)
-                }
-                
+                    .onDelete { indexSet in
+                        fruitViewModel.performDelete(indexSet: indexSet)
+                    }
+                }                                
             }.listStyle(.grouped)
                 .navigationTitle("Fruit List")
                 .onAppear {
