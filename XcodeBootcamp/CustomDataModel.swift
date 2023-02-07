@@ -18,9 +18,9 @@ struct UserModel : Identifiable {
 struct CustomDataModel: View {
         
     @State var userList : [UserModel] = [
-        UserModel(displayName: "Emrullah", userName: "e1demir", followerCount: 125, isApproved: true),
-        UserModel(displayName: "Ayça", userName: "aaycatuncayy", followerCount: 87, isApproved: true),
-        UserModel(displayName: "Kerim", userName: "fenasi", followerCount: 0, isApproved: false),
+        UserModel(displayName: "Nicko", userName: "nickky", followerCount: 125, isApproved: true),
+        UserModel(displayName: "Helen", userName: "hel22", followerCount: 87, isApproved: true),
+        UserModel(displayName: "Kareem", userName: "karem898", followerCount: 0, isApproved: false),
     ]
     
     @State var users : [String] =
@@ -49,7 +49,7 @@ struct CustomDataModel: View {
                             if user.isApproved{
                                 Image(systemName:"checkmark.diamond.fill" ).renderingMode(.original)
                             }else{
-                                Image(systemName: "checkmark.circle.badge.questionmark.fill").renderingMode(.none).accentColor(.red)                                
+                                Image(systemName: "checkmark.circle.badge.questionmark.fill").renderingMode(.none).accentColor(.red)
                             }
                         }
                     }
