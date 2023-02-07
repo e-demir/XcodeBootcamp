@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct IntroView: View {
+    
+    @AppStorage("userSignedIn") var userSignedIn : Bool = false
+    
     var body: some View {
         ZStack{
             //bg
             RadialGradient(colors: [.purple,.blue], center: .topLeading, startRadius: 5, endRadius: UIScreen.main.bounds.height)
                 .edgesIgnoringSafeArea(.all)
+            
+            //fg
+            if userSignedIn{
+                Text("Profile")
+            }else{
+                Text("OnBoarding")
+            }
+            
+            
+            //if user signed in
+            //profileView
+            //else
+            //onBoardingView
         }
     }
 }
