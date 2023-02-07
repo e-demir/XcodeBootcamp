@@ -49,13 +49,29 @@ struct DetailView: View{
             Color.orange.edgesIgnoringSafeArea(.all)
             
             //fg
-            Text(selectedItem)
-                .font(.headline)
-                .foregroundColor(.orange)
-                .padding(15)
-                .padding(.horizontal,10)
-                .background(Color.white)
-                .cornerRadius(15)
+            
+            NavigationLink(destination: FinalView()) {
+                Text(selectedItem)
+                    .font(.headline)
+                    .foregroundColor(.orange)
+                    .padding(15)
+                    .padding(.horizontal,10)
+                    .background(Color.white)
+                    .cornerRadius(15)
+            }
+        }
+    }
+}
+
+struct FinalView: View{
+    var body: some View{
+        ZStack{
+            //bg
+            LinearGradient(
+                colors: [.orange,.green],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing)
+            .edgesIgnoringSafeArea(.all)
         }
     }
 }
@@ -64,5 +80,6 @@ struct EnviromentObject_Previews: PreviewProvider {
     static var previews: some View {
         EnviromentObject()
         //DetailView(selectedItem: "iMac")
+        //FinalView()
     }
 }
