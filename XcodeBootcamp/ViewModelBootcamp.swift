@@ -15,6 +15,10 @@ struct FruitModel : Identifiable{
 
 class FruitViewModel : ObservableObject{
     
+    init() {
+        fetchData()
+    }
+    
     @Published var fruitArray : [FruitModel] = []
     @Published var isLoading : Bool = false
     
@@ -42,7 +46,9 @@ class FruitViewModel : ObservableObject{
 
 struct ViewModelBootcamp: View {
     
-    @ObservedObject var fruitViewModel: FruitViewModel = FruitViewModel()
+    // INITIAL USAGE STATE OBJECT
+    // SECOND VIEW USAGE LIKE PARAMETER OBSERVED OBJECT
+    @StateObject var fruitViewModel: FruitViewModel = FruitViewModel()
     
     var body: some View {
         NavigationView {
@@ -60,13 +66,35 @@ struct ViewModelBootcamp: View {
                     .onDelete { indexSet in
                         fruitViewModel.performDelete(indexSet: indexSet)
                     }
-                }                                
+                }
             }.listStyle(.grouped)
                 .navigationTitle("Fruit List")
-                .onAppear {
-                    fruitViewModel.fetchData()
-                }
+                .navigationBarItems(trailing: NavigationLink(destination: {
+                    AnotherView(fruitViewModel: fruitViewModel)
+                }, label: {
+                    Image(systemName: "arrow.right")
+                }))
+//                .onAppear {
+//                    fruitViewModel.fetchData()
+//                }
                 
+        }
+    }
+}
+
+struct AnotherView:View{
+    
+    @ObservedObject var fruitViewModel: FruitViewModel
+    
+    var body: some View{
+        ZStack{
+            Color.green.edgesIgnoringSafeArea(.all)
+            
+            VStack{
+                ForEach(fruitViewModel.fruitArray) { fruit in
+                    Text(fruit.name)
+                }
+            }
         }
     }
 }
