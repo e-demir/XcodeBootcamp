@@ -19,9 +19,9 @@ struct IntroView: View {
             
             //fg
             if userSignedIn{
-                Text("Profile")
+                ProfileView()
             }else{
-                Text("OnBoarding")
+                OnBoardingView()
             }
             
             
