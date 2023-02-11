@@ -9,17 +9,28 @@ import SwiftUI
 
 struct AsyncImageBootcamp: View {
     var body: some View {
-        let url = URL(string: "https://picsum.photos/500")
+        let url = URL(string: "https://pisum.photos/500")
         
-        AsyncImage(url: url) { returnedImage in
-            returnedImage
-                .resizable()
-                .scaledToFit()
-                .frame(width: 100, height: 100)
-                .cornerRadius(20)
-        } placeholder: {
-            ProgressView()
+        AsyncImage(url: url) { phase in
+            switch phase{
+            case .empty: ProgressView()
+            case .failure : (Color.green)
+            case.success(let image):
+                    image
+            default: Color.red
+                
+            }
         }
+        
+//        AsyncImage(url: url) { returnedImage in
+//            returnedImage
+//                .resizable()
+//                .scaledToFit()
+//                .frame(width: 100, height: 100)
+//                .cornerRadius(20)
+//        } placeholder: {
+//            ProgressView()
+//        }
         
 
     }
