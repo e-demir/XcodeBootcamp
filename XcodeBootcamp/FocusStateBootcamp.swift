@@ -9,20 +9,47 @@ import SwiftUI
 
 struct FocusStateBootcamp: View {
     @State var nameTxtField : String = ""
-    @FocusState var isFocused : Bool
+    @State var passwordTxtField : String = ""
+    @FocusState var isFocusedText : Bool
+    @FocusState var isFocusedPassword : Bool
+    
+    func signUp(){
+        let usernameIsValid = !nameTxtField.isEmpty
+        let passwordIsValid = !passwordTxtField.isEmpty
+        
+        if usernameIsValid && passwordIsValid{
+            print("SIGN UP")
+        }else if usernameIsValid && !passwordIsValid{
+            isFocusedText = false
+            isFocusedPassword = true
+        }else if !usernameIsValid && passwordIsValid{
+            isFocusedText = true
+            isFocusedPassword = false
+        }else{
+            isFocusedText = true
+            isFocusedPassword = false
+        }
+    }
     
     var body: some View {
         VStack{
-            TextField("Name goes here", text: $nameTxtField)
-                .focused($isFocused)
+            TextField("Username", text: $nameTxtField)
+                .focused($isFocusedText)
+                .padding(.leading)
+                .frame(height: 55)
+                .frame(maxWidth: .infinity)
+                .background(Color.gray.brightness(0.3))
+                .cornerRadius(10)
+            SecureField("Password", text: $passwordTxtField)
+                .focused($isFocusedPassword)
                 .padding(.leading)
                 .frame(height: 55)
                 .frame(maxWidth: .infinity)
                 .background(Color.gray.brightness(0.3))
                 .cornerRadius(10)
             
-            Button("Toggle this"){
-                isFocused.toggle()
+            Button("SIGN UP"){
+                signUp()
             }
         }.padding(40)
     }
